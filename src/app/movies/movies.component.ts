@@ -24,7 +24,7 @@ export class MoviesComponent implements OnInit {
   price = 50;
   selectedMovie:Movie ={
     id:1,
-    title:'Test',
+    Title:'Test',
     url:'',
     price:0,
     description:''

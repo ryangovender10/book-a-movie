@@ -1,6 +1,6 @@
 export interface Movie{
     id:number;
-    title:string;
+    Title:string;
     url:string;
     price:number;
     description:string
