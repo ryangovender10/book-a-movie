@@ -24,7 +24,7 @@ export class MoviesService {
 
   };
 
-  private _siteURL = 'http://www.omdbapi.com/?t=';
+  private _siteURL = 'https://www.omdbapi.com/?t=';
   private _param = '&apikey=';
   private _key = '9ad5a19c';
 
@@ -44,13 +44,13 @@ export class MoviesService {
     getAllMovies():Observable<MovieDb[]>{
       var title= 'batman';
        console.log(title);
-       return this.http.get<MovieDb[]>(`http://www.omdbapi.com/?s=${title}${this._param}${this._key}`)
+       return this.http.get<MovieDb[]>(`https://www.omdbapi.com/?s=${title}${this._param}${this._key}`)
        .do(data => console.log('All: ' + JSON.stringify(data)));
     }
 
     TestTry(){
       var title= 'batman';
-      return this.http.get(`http://www.omdbapi.com/?s=${title}${this._param}${this._key}`);
+      return this.http.get(`https://www.omdbapi.com/?s=${title}${this._param}${this._key}`);
     }
 
     private moviesUrl = 'api/movies';  // URL to web api
@@ -71,7 +71,7 @@ searchMovies(term:string):Observable<MovieDb[]>{
   //   return of([]);
   // }
   console.log('fuck');
-  console.log(this.http.get<MovieDb[]>(`http://www.omdbapi.com/?s=${term}${this._param}${this._key}`));
+  console.log(this.http.get<MovieDb[]>(`https://www.omdbapi.com/?s=${term}${this._param}${this._key}`));
   return this.http.get<MovieDb[]>(`http://www.omdbapi.com/?s=${term}${this._param}${this._key}`);
 }
 
